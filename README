@@ -1,31 +1,24 @@
-*************************************
-*Metagoofil  2.1                    *
-*Coded by Christian Martorella      *
-*www.edge-security.com              *
-*cmartorella@edge-security.com      *
-*Blackhat Arsenal edition           *
-*************************************
 
-THIS IS A PRE RELEASE VERSION FOR BLACKHAT ARSENAL MORE FEATURES AND IMPROVEMENTS ARE COMING SOON!
+### What is this?
 
-What is this?
--------------
+Metagoofil is a tool for extracting metadata of public documents (pdf,doc,xls,ppt,etc)
 
-Metagoofil is a tool for extracting metadata of public documents (pdf,doc,xls,ppt,etc) availables in the target websites.This information could be useful because you can get valid usernames, people names, for using later in bruteforce password attacks (vpn, ftp, webapps), the tool will also extracts interesting "paths" of the documents, where we can get shared resources names, server names, etc.
+This new version will also extract emails addresses from PDF and Word documents content
 
-This new version will also extract emails addresses from PDF and Word documents content.
-
-How it works?
-------------
+### How it works?
 
 The tool first perform a query in Google requesting different filetypes that can have useful metadata (pdf, doc, xls,ppt,etc), then will download those documents to the disk and extracts the metadata of the file using specific libraries for parsing different file types (Hachoir, Pdfminer, etc)
 
 
-Dependencies:
+### How to use
+```bash
+  metagoofil.py -d apple.com -t doc,pdf -l 200 -n 50 -o applefiles -f results.html
+  metagoofil.py -h yes -o applefiles -f results.html (local dir analysis)
+```
+
+### Dependencies:
 ------------
-In this version all depencies are included.
+In this version all depencies are included
 
 
-
-Shouts goes to: Javi, Vicente, and all Metagoofil users :)
-Thanks Pdfminer, Hachoir for their great libraries. 
+Thanks Christian Martorella. 
